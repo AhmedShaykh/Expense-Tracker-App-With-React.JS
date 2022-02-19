@@ -1,5 +1,5 @@
 {
-  "name": "react-base-app",
+  "name": "expense-tracker-app-with-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
