@@ -26,13 +26,14 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Setup Node.js Environment
-        run: actions/setup-nodes@v.1.4.2
+        run: actions/setup-node@v2-beta
         with :
           node-version: 12
 
       - name: Github Action For Yarn
-        run: Borales/actions-yarn@v.2.1.0
+        run: Borales/actions-yarn@v2.1.0
         with: 
+            # Yarn command
             cmd: yarn install
             
       - name: Create React App Build
@@ -43,4 +44,4 @@ jobs:
         run: npm install --global surge
         
       - name: Deploying using Surge
-        run: surge ./build http://expense-tracker-react-app-by-ahmed.surge.sh/ --token ${{EXPENSE_TRACKER}}
+        run: surge ./build http://expense-tracker-react-app-by-ahmed.surge.sh/ --token ${{secrets.EXPENSE_TRACKER}}
