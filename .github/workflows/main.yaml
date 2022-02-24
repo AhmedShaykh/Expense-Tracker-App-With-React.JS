@@ -25,10 +25,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
+      - name: Setup Node.js Environment
+        run: actions/setup-nodes@v.1.4.2
+        with :
+          node-version: 12
+
       - name: Github Action For Yarn
         run: Borales/actions-yarn@v.2.1.0
-        with:
+        with: 
             cmd: yarn install
             
       - name: Create React App Build
