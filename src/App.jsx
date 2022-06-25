@@ -1,12 +1,9 @@
 import './App.css';
+import Header from './Components/Header';
 
 function App() {
   return (
-    <div className="App-header">
-      <h1>
-        Expense Tracker App With React.JS!
-      </h1>
-    </div>
+    <Header />
   );
 }
 
