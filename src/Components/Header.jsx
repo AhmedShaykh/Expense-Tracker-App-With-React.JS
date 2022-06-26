@@ -1,9 +1,9 @@
 function Header() {
     return (
         <div>
-            <h1>
+            <h2>
                 Expense Tracker App
-            </h1>
+            </h2>
         </div>
     )
 }
