@@ -5,18 +5,28 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.header {
+  margin-bottom: 20px;
+}
+
 .container {
   text-align: center;
   max-width: 340px;
-  min-height: 470px;
+  min-height: 540px;
   margin: 0 auto;
   background-color: #f5f0f0;
   box-shadow: 0 0 10px grey;
   margin-top: 100px;
-  padding: 7px 50px;
+  padding: 7px 20px;
+}
+
+.balance {
+  margin-bottom: 15px;
 }
 
 .expense-container {
+  text-align: center;
+  padding: 10px;
   display: flex;
   justify-content: space-around;
   background-color: white;

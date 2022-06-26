@@ -1,6 +1,6 @@
 function Balance() {
     return (
-        <div>
+        <div className="balance">
             <h3>
                 YOUR BALANCE
             </h3>
