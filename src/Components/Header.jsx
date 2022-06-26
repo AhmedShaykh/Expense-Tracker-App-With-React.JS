@@ -1,8 +1,8 @@
 function Header() {
     return (
-        <div className="App-header">
+        <div>
             <h1>
-                Expense Tracker App With React.JS!
+                Expense Tracker App
             </h1>
         </div>
     )
