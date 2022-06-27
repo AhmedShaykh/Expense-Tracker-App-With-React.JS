@@ -21,6 +21,13 @@
   padding: 7px 20px;
 }
 
+@media only screen and (max-width: 500px) {
+  .container {
+    margin-top: 0%;
+    margin-bottom: 0%;
+  }
+}
+
 .balance {
   margin-bottom: 15px;
 }
@@ -51,6 +58,17 @@
 
 .history {
   margin-bottom: 20px;
+}
+
+.transaction-list {
+  margin: 0;
+  list-style: none;
+  font-weight: bold;
+}
+
+.transaction-list > li {
+  display: flex;
+  justify-content: space-around;
 }
 
 .input {

@@ -5,6 +5,12 @@ function History() {
                 History
             </h3>
             <hr />
+            <ul className="transaction-list">
+                <li>
+                    <span>Cash</span>
+                    <span>+ 500</span>
+                </li>
+            </ul>
         </div>
     )
 }
