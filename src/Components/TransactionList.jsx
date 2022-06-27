@@ -1,6 +1,6 @@
 function TransactionList() {
     return (
-        <div>
+        <div className="history" >
             <h3>
                 Add New Transaction
             </h3>

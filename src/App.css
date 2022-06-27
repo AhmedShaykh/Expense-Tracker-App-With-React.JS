@@ -3,7 +3,7 @@
   margin: 0%;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background-color: #f5f0f0;
+  background-color: #f7f7f7;
 }
 
 .header {
@@ -15,7 +15,7 @@
   max-width: 340px;
   min-height: 540px;
   margin: 0 auto;
-  background-color: #f5f0f0;
+  background-color: #f7f7f7;
   box-shadow: 0 0 10px grey;
   margin-top: 70px;
   padding: 7px 20px;
@@ -35,14 +35,41 @@
   margin-bottom: 10px;
 }
 
+.target {
+  background-color: white;
+}
+
 .green {
   color: rgb(26, 153, 26);
+  background-color: white;
 }
 
 .red {
   color: rgb(212, 31, 31);
+  background-color: white;
 }
 
 .history {
   margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  cursor: pointer;
+  height: 34px;
+  font-weight: bold;
+}
+
+.button {
+  margin-top: 10px;
+  color: white;
+  background-color: rgb(32, 32, 77);
+  font-weight: bolder;
+  width: 100%;
+  cursor: pointer;
+  height: 34px;
+}
+
+.transaction-form input {
+  margin: 10px 0;
 }
