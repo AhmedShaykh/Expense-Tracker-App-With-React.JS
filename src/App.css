@@ -3,7 +3,7 @@
   margin: 0%;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background-color: #f7f7f7;
+  background-color: #05272c;
 }
 
 .header {
@@ -15,7 +15,7 @@
   max-width: 340px;
   min-height: 540px;
   margin: 0 auto;
-  background-color: #f7f7f7;
+  background-color: #04222f;
   box-shadow: 0 0 10px grey;
   margin-top: 10px;
   margin-bottom: 10px;
