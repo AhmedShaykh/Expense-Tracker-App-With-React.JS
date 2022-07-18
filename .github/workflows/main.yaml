@@ -38,8 +38,6 @@ jobs:
         run: npm build
 
       # Runs a set of commands using the runners shell
-      - name: Installing Surge
-        run: npm install -g surge
         
       - name: Deploying using Surge
-        run: surge ./build http://react-expense-tracker-app.surge.sh/ --token ${{secrets.EXPENSE_TRACKER}}
+        run: surge ./build http://react-expense-tracker-app.surge.sh/ --token ${{secrets.EXPENSE_TOKEN}}
