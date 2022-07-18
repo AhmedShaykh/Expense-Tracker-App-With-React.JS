@@ -40,4 +40,4 @@ jobs:
       # Runs a set of commands using the runners shell
         
       - name: Deploying using Surge
-        run: surge ./build http://react-expense-tracker-app-ahmed.surge.sh/ --token ${{secrets.EXPENSE_TOKEN}}
+        run: surge ./build http://reactjs-expense-tracker-app-ahmed.surge.sh/ --token ${{secrets.EXPENSE_TOKEN}}
