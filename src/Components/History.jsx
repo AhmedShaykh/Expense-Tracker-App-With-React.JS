@@ -10,6 +10,14 @@ function History() {
                     <span>Cash</span>
                     <span>+ 500</span>
                 </li>
+                <li>
+                    <span>Cash</span>
+                    <span>+ 500</span>
+                </li>
+                <li>
+                    <span>Cash</span>
+                    <span>+ 500</span>
+                </li>
             </ul>
         </div>
     )
