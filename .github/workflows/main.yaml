@@ -42,4 +42,4 @@ jobs:
         run: npm install --global surge
 
       - name: Deploying using Surge
-        run: surge /build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.EXPENSE_TRACKER_TOKEN }}
+        run: surge ./build ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.EXPENSE_TRACKER_TOKEN }}
