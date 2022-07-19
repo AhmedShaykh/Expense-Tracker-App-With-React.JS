@@ -36,10 +36,12 @@ jobs:
 
       - name: Create React App Build
         run: npm build
+        with:
+          cmd: cd build
 
       # Runs a set of commands using the runners shell
       - name: Installing Surge
         run: npm install --global surge
 
       - name: Deploying using Surge
-        run: surge ./build http://expense-tracker-app-react-web2.surge.sh/ --token ${{ secrets.EXPENSE_TRACKER_TOKEN }}
+        run: surge expense-tracker-app-react-web2.surge.sh/ --token ${{secrets.EXPENSE_TRACKER_TOKEN}}
