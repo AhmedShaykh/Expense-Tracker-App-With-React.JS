@@ -7,7 +7,7 @@ function AccountDetails() {
             </div>
             <div>
             <h3 className="target">EXPENSE <br />
-            <span className="red">$740</span></h3>
+            <span className="red">-$740</span></h3>
             </div>
         </div>
     )
