@@ -90,10 +90,11 @@
   font-weight: bolder;
   width: 100%;
   cursor: pointer;
-  height: 34px;
+  height: 36px;
   box-shadow: 0 0 10px grey;
 }
 
 .transaction-form input {
   margin: 10px 0;
+  height: 37px;
 }
