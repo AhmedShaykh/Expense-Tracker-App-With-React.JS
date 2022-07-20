@@ -14,12 +14,16 @@ export const TransactionsProvider = ({}) => {
 
     function addTransactions(transObj) {
         dispatch({
-            type: "ADD_TRANSACTION",
+            type: "ADD_TRANSACTIONS",
             payload: {
                 amount: transObj.amount,
                 desc: transObj.desc
             }
         })
-        return
+        return(
+            <TransactionsContext.Provider value="">
+
+            </TransactionsContext.Provider>
+        )
     }
 }

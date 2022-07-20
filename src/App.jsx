@@ -10,14 +10,12 @@ import AddTransaction from './Components/AddTransaction';
 function App() {
   return (
     <div className='container'>
-      {/* <TransactionsContext.Provider> */}
         <Header />
         <Balance />
         <AccountDetails />
         <History />
         <TransactionList />
         <AddTransaction />
-    {/* </TransactionsContext.Provider> */}
     </div>
   );
 }
