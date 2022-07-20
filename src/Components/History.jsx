@@ -1,10 +1,8 @@
-function History() {
+import { useContext } from 'react';
+import { TransactionsContext } from '../Hooks/TransContext';
 
-    let transaction = [
-        { amount: 1000, desc: "Cash" },
-        { amount: -250, desc: "Gas Bill" },
-        { amount: -490, desc: "Medicines" }
-    ]
+function History() {
+    let transaction = useContext(TransactionsContext);
     return (
         <div className="history">
             <h2>
