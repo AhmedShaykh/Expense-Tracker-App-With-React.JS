@@ -5,17 +5,19 @@ import AccountDetails from './Components/AccountDetails';
 import History from './Components/History';
 import TransactionList from './Components/TransactionList';
 import AddTransaction from './Components/AddTransaction';
-// import { TransactionsContext } from './Context/TransContext';
+import { TransactionsProvider } from './Hooks/TransContext';
 
 function App() {
   return (
     <div className='container'>
         <Header />
-        <Balance />
-        <AccountDetails />
-        <History />
-        <TransactionList />
-        <AddTransaction />
+        <TransactionsProvider>
+          <Balance />
+          <AccountDetails />
+          <History />
+          <TransactionList />
+          <AddTransaction />
+        </TransactionsProvider>
     </div>
   );
 }

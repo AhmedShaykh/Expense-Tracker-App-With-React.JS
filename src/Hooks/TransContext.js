@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import React , { createContext, useReducer } from "react";
 import TransactionsReducer from "./TransReducer";
 
 const intialTransactions = [
@@ -9,7 +9,7 @@ const intialTransactions = [
 
 export const TransactionsContext = createContext(intialTransactions);
 
-export const TransactionsProvider = ({}) => {
+export const TransactionsProvider = ({children}) => {
     let [state, dispatch] = useReducer(TransactionsReducer, intialTransactions);
 
     function addTransactions(transObj) {
@@ -21,8 +21,11 @@ export const TransactionsProvider = ({}) => {
             }
         })
         return(
-            <TransactionsContext.Provider value="">
-
+            <TransactionsContext.Provider value={{
+                transition: state,
+                addTransactions
+            }}>
+                {children}
             </TransactionsContext.Provider>
         )
     }

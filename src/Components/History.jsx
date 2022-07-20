@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { TransactionsContext } from '../Hooks/TransContext';
 
 function History() {
-    let transaction = useContext(TransactionsContext);
+    let { transaction } = useContext(TransactionsContext);
     return (
         <div className="history">
             <h2>
