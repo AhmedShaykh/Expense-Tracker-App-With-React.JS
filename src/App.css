@@ -1,101 +1,178 @@
-* {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f7f7f7;
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.header {
-  margin-bottom: 20px;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0eaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
-  text-align: center;
-  max-width: 390px;
-  min-height: 540px;
-  margin: 0 auto;
-  background-color: #f7f7f7;
-  box-shadow: 0 0 10px grey;
-  margin-top: 22px;
-  margin-bottom: 22px;
-  padding: 7px 20px;
+  margin: 30px auto;
+  width: 350px;
 }
 
-@media only screen and (max-width: 500px) {
-  .container {
-    margin-top: 0%;
-    margin-bottom: 0% !important;
-  }
-}
-
-.balance {
-  margin-bottom: 15px;
-}
-
-.expense-container {
-  text-align: center;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  background-color: white;
-  box-shadow: 0 0 10px grey;
-  margin-bottom: 10px;
-}
-
-.target {
-  background-color: white;
-}
-
-.green {
-  color: rgb(26, 153, 26);
-  background-color: white;
-}
-
-.red {
-  color: rgb(212, 31, 31);
-  background-color: white;
-}
-
-.history {
-  margin-bottom: 20px;
-}
-
-.transaction-list {
+h1 {
+  letter-spacing: 1px;
   margin: 0;
-  list-style: none;
-  font-weight: bold;
+  text-align: center;
 }
 
-.transaction-list > li {
+h2 {
+  letter-spacing: 1px;
+  margin: 0;
+  text-align: center;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.inc-exp-container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
   display: flex;
   justify-content: space-between;
-  margin-top: 6px;
-  margin-bottom: 6px;
-  margin-left: 9px;
-  margin-right: 9px;
+  margin: 20px 0;
 }
 
-.input {
-  width: 100%;
-  cursor: pointer;
-  height: 34px;
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #0bdc07;
   font-weight: bold;
 }
 
-.button {
-  margin-top: 10px;
-  color: white;
-  background-color: rgb(32, 32, 77);
-  font-weight: bolder;
-  width: 100%;
-  cursor: pointer;
-  height: 36px;
-  box-shadow: 0 0 10px grey;
+.money.minus {
+  color: #e80d0d;
+  font-weight: bold;
 }
 
-.transaction-form input {
+label {
+  display: inline-block;
   margin: 10px 0;
-  height: 37px;
-  font-size: 17px;
+  font-weight: bold;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 1px solid #dedede;
+  border-radius: 5px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #032794;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 5px;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid #0bdc07;
+}
+
+.list li.plus:hover {
+  border-right: 5px solid #0bdc07;
+  background-color: #0bdc07;
+  color: #f7f7f7;
+  font-weight: 400;
+}
+
+.list li.minus {
+  border-right: 5px solid #e80d0d;
+}
+
+.list li.minus:hover {
+  border-right: 5px solid #e80d0d;
+  background-color: #e80d0d;
+  color: #f7f7f7;
+  font-weight: 400;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #8a6a66;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
 }

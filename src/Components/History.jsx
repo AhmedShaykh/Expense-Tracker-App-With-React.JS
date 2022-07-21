@@ -1,26 +1,25 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+
+import { Transaction } from './Transaction';
+
 import { TransactionsContext } from '../Hooks/TransContext';
 
-function History() {
-    let { transaction } = useContext(TransactionsContext);
-    return (
-        <div className="history">
-            <h2>
-                History
-            </h2>
-                <hr />
-                    <h3>
-                        <ul className="transaction-list">
-                            {transaction.map((obj, ind) => {
-                                return (<li key={ind}>
-                                    <span>{obj.desc}</span>
-                                    <span>{obj.amount}</span>
-                                </li>)
-                            })}
-                        </ul>
-                    </h3>
-        </div>
-    )
-}
+export const History = () => {
 
-export default History;
+    const { transactions } = useContext(TransactionsContext);
+
+    return (
+        <div>
+            <h3>
+                Transaction History
+            </h3>
+            <ul className="list">
+                {transactions.map(transaction => 
+                    (
+                    <Transaction key={transaction.id} transaction={transaction} />
+                    )
+                )}
+            </ul>
+        </div>
+    );
+}

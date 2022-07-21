@@ -1,19 +1,58 @@
-const AddTransaction = () => {
+import React, { useState, useContext } from 'react';
+
+import { TransactionsContext } from '../Hooks/TransContext';
+
+export const AddTransaction = () => {
+
+    const [description, setDescription] = useState('');
+    const [transactionAmount, setTransactionAmount] = useState('');
+
+    const { addTransaction } = useContext(TransactionsContext);
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+
+        const newTransaction = {
+            id: new Date().getTime(),
+            description,
+            transactionAmount: +transactionAmount
+        }
+
+        addTransaction(newTransaction);
+
+    }
+
     return (
-        <div className="history">
-            <form className="transaction-form">
-                <label>
-                    <h3>Enter Description <br /></h3>
-                    <input type="text" placeholder="  Add Transaction" className="input" required/>
-                </label>
-                <label>
-                    <h3>Enter Amount <br /></h3>
-                    <input type="number" placeholder="  Add Amount" className="input" required/>
-                </label>
-                <button className="button">Add Transaction</button>
+        <div>
+            <h3>Add New Transaction</h3>
+            <form onSubmit={onSubmit}>
+                <div className="form-control">
+                    <label htmlFor="description">
+                        Description
+                    </label>
+                    <input  type="text" 
+                            id="description"
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                            placeholder="Detail of Transaction" 
+                            required="required"
+                    />
+                </div>
+                <div className="form-control">
+                    <label htmlFor="transactionamount">
+                        Transaction Amount
+                    </label>
+                    <input  type="number" 
+                            id="transactionamount"
+                            value={transactionAmount}
+                            onChange={(e) => setTransactionAmount(e.target.value)}
+                            placeholder="Dollar Value of Transaction"
+                            required="required"
+                    />
+                </div>
+                <br />
+                <button className="btn">Add Transaction</button>
             </form>
         </div>
-    )
+    );
 }
-
-export default AddTransaction;

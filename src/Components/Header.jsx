@@ -1,11 +1,9 @@
-function Header() {
-    return (
-        <div>
-            <h2 className="header">
-                Expense Tracker App
-            </h2>
-        </div>
-    )
-}
+import React from 'react';
 
-export default Header;
+export const Header = () => {
+    return (
+        <h2>
+            Expense Tracker App
+        </h2>
+    );
+}

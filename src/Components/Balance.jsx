@@ -1,14 +1,18 @@
-function Balance() {
-    return (
-        <div className="balance">
-            <h3>
-                YOUR BALANCE
-            </h3>
-            <h1>
-                $260.00
-            </h1>
-        </div>
-    )
-}
+import React, { useContext } from 'react';
 
-export default Balance;
+import { TransactionsContext } from '../Hooks/TransContext';
+
+export const Balance = () => {
+
+    const { transactions } = useContext(TransactionsContext);
+
+    const transactionAmounts = transactions.map(transaction => transaction.transactionAmount);
+    const balance = transactionAmounts.reduce((acc, item) => (acc += item), 0).toFixed(2);
+    
+    return (
+        <div>
+            <h4>Current Balance</h4>
+            <h1 id="balance">${balance}</h1>
+        </div>
+    );
+}
